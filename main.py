@@ -59,5 +59,5 @@ async def reload(
 
 
 
-
-bot.run("OTE2NjU2NDU5ODM0NTk3NDE2.YatU2g.X3KDFzW_z_2ryLR3jTcpQ7v0mvA")
+token = os.get_env("TOKEN")
+bot.run(token)
