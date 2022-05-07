@@ -5,10 +5,6 @@ from discord.ext import commands
 from discord.commands import  Option
 
 
-
-
-
-
 bot = commands.Bot(
     comamnd_prefix=['e'],
     intents=discord.Intents.all(),
