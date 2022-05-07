@@ -11,6 +11,7 @@ bot = commands.Bot(
     debug_guilds=[914830703974305842]
 )
 
+
 cogs = []
 for filename in os.listdir('./cogs'):
 
