@@ -3,12 +3,12 @@ import discord
 from discord import option
 from discord.ext import commands
 from discord.commands import  Option
-
+from config import config
 
 bot = commands.Bot(
     comamnd_prefix=['e'],
     intents=discord.Intents.all(),
-    debug_guilds=[914830703974305842]
+    debug_guilds=[914830703974305842,838417013402632212]
 )
 
 
@@ -57,7 +57,9 @@ async def reload(
     await ctx.respond(cog + " reloaded")
     pass
 
+@bot.event
+async def on_application_command_error(ctx, error):
+    await ctx.respond(error)
 
 
-token = os.get_env("TOKEN")
-bot.run(token)
+bot.run(config.BOT_TOKEN)

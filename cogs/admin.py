@@ -102,8 +102,7 @@ class Admin(commands.Cog):
 
         for message in paginate(result):
             result = ''.join(message)
-            resultem = discord.Embed(title="Output", description=f"```py\n{result}```",
-                                     color=random.choice(self.bot.color_list))
+            resultem = discord.Embed(title="Output", description=f"```py\n{result}```")
             await ctx.send(embed=resultem)
 
 
