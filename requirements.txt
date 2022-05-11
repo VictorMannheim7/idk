@@ -1,7 +1,5 @@
 py-cord==2.0.0b7
 pynacl
-youtube_dl
-yt-dlp
 aiohttp
 asyncio
 beautifulsoup4
