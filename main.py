@@ -1,5 +1,5 @@
 import os
-os.system("pip intall yt_dlp")
+os.system("pip install yt_dlp")
 os.system("pip install youtube_dl")
 import discord
 from discord import option
