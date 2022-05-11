@@ -9,6 +9,7 @@ class error(commands.Cog):
 	@commands.Cog.listener()
 	async def on_application_command_error(self , ctx , error):
 		raise error
+		return
 		await ctx.respond(error ,ephemeral = True)
 
 def setup(bot):

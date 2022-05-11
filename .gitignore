@@ -3,6 +3,4 @@
 /cogs/__pycache__
 /.env
 /musicbot/__pycache__
-/config/config.py
-/config/cookies/cookies.txt
 /config/__pycache__
