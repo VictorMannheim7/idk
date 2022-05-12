@@ -1,6 +1,9 @@
 import os
+import traceback
 import discord
 from discord.ext import commands
+from config import config
+
 
 class Cupid(commands.Bot):
     def __init__(self):
@@ -17,5 +20,10 @@ class Cupid(commands.Bot):
                 print(f"cogs.{filename[:-3]} loaded")
 
 
+
+    async def on_application_command_error(self, ctx, error):
+        await ctx.respond(''.join(traceback.format_exception(
+                type(error), error, error.__traceback__)))
+
 bot = Cupid()
-bot.run("OTczMjY1NTU5NDE4NDQ1OTQ1.GUuSMy.7krscdAXYwIzFbzKZnQGOWxbrgxVK1VCdednRw")
+bot.run(config.BOT_TOKEN)
