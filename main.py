@@ -8,7 +8,7 @@ from discord.commands import  Option
 from config import config
 
 bot = commands.Bot(
-    comamnd_prefix=['e'],
+    comamnd_prefix=['a'],
     intents=discord.Intents.all(),
     debug_guilds=[914830703974305842,838417013402632212]
 )
