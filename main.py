@@ -10,7 +10,7 @@ from config import config
 bot = commands.Bot(
     comamnd_prefix=['a'],
     intents=discord.Intents.all(),
-    debug_guilds=[914830703974305842,838417013402632212]
+    debug_guilds=[914830703974305842,838417013402632212,973423250682023966]
 )
 
 
