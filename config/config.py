@@ -19,7 +19,7 @@ VC_TIMEOUT = 600 #seconds
 VC_TIMOUT_DEFAULT = True  #default template setting for VC timeout true= yes, timeout false= no timeout
 ALLOW_VC_TIMEOUT_EDIT = True  #allow or disallow editing the vc_timeout guild setting
 
-GUILDIDS = [914830703974305842 , 838417013402632212]
+GUILDIDS = [914830703974305842 , 838417013402632212 , 973423250682023966]
 STARTUP_MESSAGE = "Starting Bot..."
 STARTUP_COMPLETE_MESSAGE = "Startup Complete"
 
