@@ -19,6 +19,7 @@ class Cupid(commands.Bot):
             if filename.endswith('.py'):
                 self.load_extension(f'cogs.{filename[:-3]}')
                 print(f"cogs.{filename[:-3]} loaded")
+        self.load_extension('jishaku')
 
 
 
@@ -27,6 +28,6 @@ class Cupid(commands.Bot):
                 type(error), error, error.__traceback__)))
 
 bot = Cupid()
-bot.load_extension('jishaku')
+
 
 bot.run(str(config.BOT_TOKEN))
