@@ -8,7 +8,7 @@ import jishaku
 class Cupid(commands.Bot):
     def __init__(self):
         super().__init__(
-            command_prefix=['.'],
+            command_prefix=['.','L '],
             intents=discord.Intents.all(),
             owner_ids=set(['32423423423','3234234234'])
         )
