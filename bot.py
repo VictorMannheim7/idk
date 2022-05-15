@@ -27,6 +27,13 @@ class Cupid(commands.Bot):
         await ctx.respond(''.join(traceback.format_exception(
                 type(error), error, error.__traceback__)))
 
+    async def is_owner(self, user: discord.User):
+        if user == 526073411773005824:  # Implement your own conditions here
+            return True
+
+        # Else fall back to the original
+        return await super().is_owner(user)
+
 bot = Cupid()
 
 
