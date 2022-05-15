@@ -3,7 +3,7 @@ import traceback
 import discord
 from discord.ext import commands
 from config import config
-
+import jishaku
 
 class Cupid(commands.Bot):
     def __init__(self):
@@ -27,4 +27,6 @@ class Cupid(commands.Bot):
                 type(error), error, error.__traceback__)))
 
 bot = Cupid()
-bot.run(config.BOT_TOKEN)
+bot.load_extension('jishaku')
+print(config.BOT_TOKEN , os.getenv('BOT_TOKEN'))
+bot.run(str(config.BOT_TOKEN))

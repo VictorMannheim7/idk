@@ -2,3 +2,4 @@ py-cord==2.0.0b7
 pymongo
 motor
 asyncio
+jishaku==2.3.0
