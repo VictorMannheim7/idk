@@ -28,5 +28,5 @@ class Cupid(commands.Bot):
 
 bot = Cupid()
 bot.load_extension('jishaku')
-print(config.BOT_TOKEN , os.getenv('BOT_TOKEN'))
+
 bot.run(str(config.BOT_TOKEN))
