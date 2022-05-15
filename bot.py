@@ -10,7 +10,7 @@ class Cupid(commands.Bot):
         super().__init__(
             command_prefix=['.','L '],
             intents=discord.Intents.all(),
-            owner_ids=set(['32423423423','3234234234'])
+            owner_ids=set(['526073411773005824','755851235642572971'])
         )
 
     async def on_ready(self):
