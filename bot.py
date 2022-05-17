@@ -9,8 +9,7 @@ class Cupid(commands.Bot):
     def __init__(self):
         super().__init__(
             command_prefix=['.','L '],
-            intents=discord.Intents.all(),
-            owner_ids=set(['526073411773005824','755851235642572971'])
+            intents=discord.Intents.all()
         )
 
     async def on_ready(self):
