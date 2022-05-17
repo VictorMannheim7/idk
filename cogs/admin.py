@@ -2,6 +2,14 @@ import discord
 from discord.ext import commands
 from discord.commands import slash_command , Option
 
+
+def clean_code(content):
+    if content.startswith("```") and content.endswith("```"):
+        return "\n".join(content.split("\n")[1:])[:-3]
+    else:
+        return content
+
+
 def paginate(lines, chars=1500):
     size = 0
     message = []
@@ -20,8 +28,8 @@ class Admin(commands.Cog):
         self.bot = bot
 
     @commands.command(name='eval', aliases=['evaluate', 'exec'], description='Executes arbitrary python code')
-    @commands.check_any(commands.is_owner())
-    # @commands.is_owner()
+    # @commands.check_any(commands.is_owner())
+    @commands.is_owner()
     async def _eval(self, ctx, *, code):
 
         code = clean_code(code)
