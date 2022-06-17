@@ -3,3 +3,4 @@ pymongo
 motor
 asyncio
 jishaku==2.3.0
+psutil

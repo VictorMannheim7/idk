@@ -4,6 +4,7 @@ import discord
 from discord.ext import commands
 from config import config
 import jishaku
+from datetime import datetime
 
 class Cupid(commands.Bot):
     def __init__(self):
@@ -34,6 +35,7 @@ class Cupid(commands.Bot):
         return await super().is_owner(user)
 
 bot = Cupid()
+bot.startTime = datetime.now()
 
 
 bot.run(str(config.BOT_TOKEN))

@@ -16,3 +16,4 @@ database=mongo["cupideconomy"]
 bal= Document(database , "balance")
 inv=Document(database , "inventory")
 active=Document(database , "activeitems")
+blacklist=Document(database , "blacklist")
