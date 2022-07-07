@@ -108,4 +108,4 @@ class Info(commands.Cog):
         ping = (time.monotonic() - before) * 1000
         await message.edit(content=f"🏓 WS: {before_ws}ms  |  REST: {int(ping)}ms")
 def setup(client):
-  client.add_cog(info(client))
+  client.add_cog(Info(client))

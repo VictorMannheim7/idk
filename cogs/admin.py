@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
 from discord.commands import slash_command , Option
-
+import os
+import random , asyncio
 
 def clean_code(content):
     if content.startswith("```") and content.endswith("```"):
