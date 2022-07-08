@@ -44,7 +44,7 @@ class Info(commands.Cog):
             embed.add_field(name="Servers",value=len(ctx.bot.guilds),inline=True)
             embed.add_field(name="Users",value=len(ctx.bot.users),inline=True)
             embed.add_field(name="Libraries", value=f"Python Version:- 3.8.10 \nDiscord.py Version:- {discord.__version__}",inline=True)
-            embed.add_field(name="Statistics", value=f"RAM:- {ramUsage:.2f} \nCPU:- {cpu_usage} \nMemory:- {memory_usage:.2f} \nLast boot: <t:{round(self.client.startTime.timestamp())}:R>" ,inline=True)
+            embed.add_field(name="Statistics", value=f"RAM:- {ramUsage:.2f} \nCPU:- {cpu_usage} \nMemory:- {memory_usage:.2f} \nLast boot: <t:{round(self.bot.startTime.timestamp())}:R>" ,inline=True)
             embed.set_footer(text=f"Uptime:- {since}")
 
             await ctx.respond(embed=embed)
@@ -83,7 +83,7 @@ class Info(commands.Cog):
         embed.add_field(name="Servers",value=len(ctx.bot.guilds),inline=True)
         embed.add_field(name="Users",value=len(ctx.bot.users),inline=True)
         embed.add_field(name="Libraries", value=f"Python Version:- 3.8.10 \nDiscord.py Version:- {discord.__version__}",inline=True)
-        embed.add_field(name="Statistics", value=f"RAM:- {ramUsage:.2f} \nCPU:- {cpu_usage} \nMemory:- {memory_usage:.2f} \nLast boot: <t:{round(self.client.startTime.timestamp())}:R>" ,inline=True)
+        embed.add_field(name="Statistics", value=f"RAM:- {ramUsage:.2f} \nCPU:- {cpu_usage} \nMemory:- {memory_usage:.2f} \nLast boot: <t:{round(self.bot.startTime.timestamp())}:R>" ,inline=True)
         embed.set_footer(text=f"Uptime:- {since}")
 
         await ctx.send(embed=embed)
