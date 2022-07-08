@@ -9,6 +9,8 @@ class Info(commands.Cog):
     def __init__(self , bot):
         self.bot = bot
         self.guildids = config.GUILDIDS
+        self.psutil = psutil
+
 
     @slash_command(name="stats", description="Shows statistics of the bot", guild_ids=config.GUILDIDS)
     async def __stats(self , ctx):
@@ -107,5 +109,5 @@ class Info(commands.Cog):
         message = await ctx.send("🏓 Pong")
         ping = (time.monotonic() - before) * 1000
         await message.edit(content=f"🏓 WS: {before_ws}ms  |  REST: {int(ping)}ms")
-def setup(client):
-  client.add_cog(Info(client))
+def setup(bot):
+  client.add_cog(Info(bot))
