@@ -40,7 +40,7 @@ class Info(commands.Cog):
             memory_usage = psutil.Process().memory_info().rss / 1024 ** 2
             cpu_usage = psutil.cpu_percent() / psutil.cpu_count()
             embed = discord.Embed(title=f"",colour=discord.Color.magenta())
-            embed.add_field(name=f"Latency:-", value=f" {round(self.client.latency*1000)}",inline=True)
+            embed.add_field(name=f"Latency:-", value=f" {round(self.bot.latency*1000)}",inline=True)
             embed.add_field(name="Servers",value=len(ctx.bot.guilds),inline=True)
             embed.add_field(name="Users",value=len(ctx.bot.users),inline=True)
             embed.add_field(name="Libraries", value=f"Python Version:- 3.8.10 \nDiscord.py Version:- {discord.__version__}",inline=True)
@@ -79,7 +79,7 @@ class Info(commands.Cog):
         memory_usage = psutil.Process().memory_info().rss / 1024 ** 2
         cpu_usage = psutil.cpu_percent() / psutil.cpu_count()
         embed = discord.Embed(title=f"",colour=discord.Color.magenta())
-        embed.add_field(name=f"Latency:-", value=f" {round(self.client.latency*1000)}",inline=True)
+        embed.add_field(name=f"Latency:-", value=f" {round(self.bot.latency*1000)}",inline=True)
         embed.add_field(name="Servers",value=len(ctx.bot.guilds),inline=True)
         embed.add_field(name="Users",value=len(ctx.bot.users),inline=True)
         embed.add_field(name="Libraries", value=f"Python Version:- 3.8.10 \nDiscord.py Version:- {discord.__version__}",inline=True)
@@ -96,7 +96,7 @@ class Info(commands.Cog):
     async def _ee_stats(self , ctx):
         """ Pong! """
         before = time.monotonic()
-        before_ws = int(round(self.client.latency * 1000, 1))
+        before_ws = int(round(self.bot.latency * 1000, 1))
         message = await ctx.respond("🏓 Pong")
         ping = (time.monotonic() - before) * 1000
         await ctx.edit(content=f"🏓 WS: {before_ws}ms  |  REST: {int(ping)}ms")
@@ -105,7 +105,7 @@ class Info(commands.Cog):
     async def _ping(self, ctx):
         """ Pong! """
         before = time.monotonic()
-        before_ws = int(round(self.client.latency * 1000, 1))
+        before_ws = int(round(self.bot.latency * 1000, 1))
         message = await ctx.send("🏓 Pong")
         ping = (time.monotonic() - before) * 1000
         await message.edit(content=f"🏓 WS: {before_ws}ms  |  REST: {int(ping)}ms")
