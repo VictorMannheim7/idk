@@ -16,9 +16,9 @@ class Info(commands.Cog):
     async def __stats(self , ctx):
             ramUsage = self.psutil.Process().memory_full_info().rss / 1024**2
             members = 0
-            for guild in self.client.guilds:
+            for guild in self.bot.guilds:
                 members += guild.member_count - 1
-            uptime = time.time() - self.client.startTime.timestamp()
+            uptime = time.time() - self.bot.startTime.timestamp()
 
             day = uptime // (243600)
             uptime = uptime % (243600)
@@ -55,9 +55,9 @@ class Info(commands.Cog):
 
         ramUsage = self.psutil.Process().memory_full_info().rss / 1024**2
         members = 0
-        for guild in self.client.guilds:
+        for guild in self.bot.guilds:
             members += guild.member_count - 1
-        uptime = time.time() - self.client.startTime.timestamp()
+        uptime = time.time() - self.bot.startTime.timestamp()
 
         day = uptime // (243600)
         uptime = uptime % (243600)
@@ -110,4 +110,4 @@ class Info(commands.Cog):
         ping = (time.monotonic() - before) * 1000
         await message.edit(content=f"🏓 WS: {before_ws}ms  |  REST: {int(ping)}ms")
 def setup(bot):
-  client.add_cog(Info(bot))
+  bot.add_cog(Info(bot))
