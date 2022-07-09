@@ -8,11 +8,11 @@ from config import config
 class Info(commands.Cog):
     def __init__(self , bot):
         self.bot = bot
-        self.guildids = config.GUILDIDS
+        # self.914830703974305842, 973423250682023966 = config.914830703974305842, 973423250682023966
         self.psutil = psutil
 
 
-    @slash_command(name="stats", description="Shows statistics of the bot", guild_ids=config.GUILDIDS)
+    @slash_command(name="stats", description="Shows statistics of the bot", guild_ids=[914830703974305842, 973423250682023966])
     async def __stats(self , ctx):
             ramUsage = self.psutil.Process().memory_full_info().rss / 1024**2
             members = 0
@@ -92,7 +92,7 @@ class Info(commands.Cog):
 
 
 
-    @slash_command(name="ping", description="Shows statistics of the bot", guild_ids=config.GUILDIDS)
+    @slash_command(name="ping", description="Shows statistics of the bot", guild_ids=[914830703974305842, 973423250682023966])
     async def _ee_stats(self , ctx):
         """ Pong! """
         before = time.monotonic()
